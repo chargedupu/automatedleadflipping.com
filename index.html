@@ -650,7 +650,7 @@
             <div class="footer-links">
                 <a href="/terms.html">Terms of Service</a>
                 <a href="/privacy.html">Privacy Policy</a>
-                <a href="mailto:support@chargedupuniversity.com">Contact Us</a>
+                <a href="mailto:support@startflippingdeals.com">Contact Us</a>
             </div>
             <p class="copyright">© 2026 Ridge Point Holdings LLC. All rights reserved.</p>
             <p class="disclaimer">This workshop provides educational information about real estate investing and automation tools. Results vary based on individual effort, market conditions, and other factors. Attendance at this free workshop does not guarantee any specific outcomes. Any training programs discussed during the workshop are optional and available for purchase separately.</p>
@@ -660,27 +660,25 @@
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Collect form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                timestamp: new Date().toISOString()
-            };
-            
-            // Log to console (replace with actual form submission)
-            console.log('Registration submitted:', formData);
-            
-            // TODO: Replace this with your Jotform or webhook endpoint
-            // Example:
-            // fetch('YOUR_JOTFORM_OR_WEBHOOK_URL', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
-            
+
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            // Submit to Jotform
+            var jotformData = new FormData();
+            jotformData.append('q3_fullName[first]', firstName);
+            jotformData.append('q3_fullName[last]', lastName);
+            jotformData.append('q4_emailAddress', email);
+            jotformData.append('q5_phoneNumber[full]', phone);
+
+            fetch('https://submit.jotform.com/submit/260616320999060/', {
+                method: 'POST',
+                body: jotformData,
+                mode: 'no-cors'
+            });
+
             // Show success message
             document.getElementById('formContainer').classList.add('hidden');
             document.getElementById('successMessage').classList.add('show');

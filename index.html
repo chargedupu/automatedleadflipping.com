@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Lead Flipping Workshop | Free Training with Chris Jefferson</title>
+    <meta name="description" content="Join Chris Jefferson for a free workshop on using AI and automation tools to streamline your real estate wholesaling business.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #f5a623;
+            --accent-hover: #ffc107;
+            --border: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, #e09000 100%);
+            color: var(--bg-primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .event-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .event-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .event-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+        }
+
+        .event-info {
+            text-align: left;
+        }
+
+        .event-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .event-value {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Registration Form - Now in Hero */
+        .form-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 28px;
+            font-size: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 500px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: 'Outfit', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group input::placeholder {
+            color: #555;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, var(--accent) 0%, #e09000 100%);
+            border: none;
+            border-radius: 10px;
+            color: var(--bg-primary);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.3);
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        /* What You'll Learn Section */
+        .learn-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .learn-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .learn-item {
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: border-color 0.3s ease;
+        }
+
+        .learn-item:hover {
+            border-color: var(--accent);
+        }
+
+        .learn-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, #e09000 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .learn-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--bg-primary);
+        }
+
+        .learn-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .learn-content p {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        /* Host Section */
+        .host-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .host-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .host-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .host-image {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 16px;
+            border: 3px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .host-image {
+                margin: 0 auto;
+            }
+        }
+
+        .host-content h2 {
+            font-size: 14px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .host-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .host-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .host-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .host-stats {
+                justify-content: center;
+            }
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .disclaimer {
+            max-width: 700px;
+            margin: 24px auto 0;
+            font-size: 11px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .success-message h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .success-message p {
+            color: var(--text-secondary);
+        }
+
+        .form-container.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo.png" alt="The U - A Wholesaler Training Community" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Form -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">Free Live Workshop</div>
+            <h1>Learn How to Use <span>AI & Automation</span> to Streamline Your Real Estate Business</h1>
+            <p class="hero-subtitle">Join this free training to discover how modern tools can help you find leads, manage follow-ups, and close more deals.</p>
+            
+            <div class="event-details">
+                <div class="event-detail">
+                    <div class="event-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                        </svg>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-label">Date</div>
+                        <div class="event-value">Thursday, March 5th, 2026</div>
+                    </div>
+                </div>
+                <div class="event-detail">
+                    <div class="event-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-label">Time</div>
+                        <div class="event-value">7:00 PM EST</div>
+                    </div>
+                </div>
+                <div class="event-detail">
+                    <div class="event-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-label">Location</div>
+                        <div class="event-value">Online (Zoom)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form - Now directly after event details -->
+            <div class="form-section">
+                <div class="form-container" id="formContainer">
+                    <h2>Reserve Your Free Seat</h2>
+                    <p class="form-subtitle">Enter your details below to register.</p>
+                    
+                    <form id="registrationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Register Now — It's Free</button>
+                        <p class="form-note">By registering, you agree to receive email and SMS reminders about the workshop.</p>
+                    </form>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3>You're Registered!</h3>
+                    <p>Check your email for confirmation and workshop details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="learn-section">
+        <div class="container">
+            <h2>What You'll Learn</h2>
+            <div class="learn-grid">
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                        </svg>
+                    </div>
+                    <div class="learn-content">
+                        <h3>AI-Powered Lead Finding</h3>
+                        <p>Discover how to use automation tools to identify motivated sellers in your target market.</p>
+                    </div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                        </svg>
+                    </div>
+                    <div class="learn-content">
+                        <h3>Automated Follow-Up Systems</h3>
+                        <p>Learn how to set up systems that nurture leads automatically so you never miss an opportunity.</p>
+                    </div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                        </svg>
+                    </div>
+                    <div class="learn-content">
+                        <h3>Streamlined Workflow Setup</h3>
+                        <p>See how to build efficient processes using tools like GoHighLevel to manage your operation.</p>
+                    </div>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+                        </svg>
+                    </div>
+                    <div class="learn-content">
+                        <h3>Real-World Implementation</h3>
+                        <p>Get a practical walkthrough of systems that are working right now in active businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host Section -->
+    <section class="host-section">
+        <div class="container">
+            <div class="host-grid">
+                <img src="chris.jpg" alt="Chris Jefferson" class="host-image">
+                <div class="host-content">
+                    <h2>Your Host</h2>
+                    <h3>Chris Jefferson</h3>
+                    <p>Chris is a real estate investor and educator with over 14 years of experience in the industry. He started as a wholesaler and has since built systems and processes that help real estate professionals work more efficiently.</p>
+                    <p>He founded The U, a training community focused on helping wholesalers implement modern tools and proven strategies in their businesses. Chris is passionate about sharing practical, real-world knowledge that can be applied immediately.</p>
+                    
+                    <div class="host-stats">
+                        <div class="stat">
+                            <div class="stat-value">14+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">1,000+</div>
+                            <div class="stat-label">Deals Closed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">4,500+</div>
+                            <div class="stat-label">Students Trained</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="mailto:support@chargedupuniversity.com">Contact Us</a>
+            </div>
+            <p class="copyright">© 2026 Ridge Point Holdings LLC. All rights reserved.</p>
+            <p class="disclaimer">This workshop provides educational information about real estate investing and automation tools. Results vary based on individual effort, market conditions, and other factors. Attendance at this free workshop does not guarantee any specific outcomes. Any training programs discussed during the workshop are optional and available for purchase separately.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Log to console (replace with actual form submission)
+            console.log('Registration submitted:', formData);
+            
+            // TODO: Replace this with your Jotform or webhook endpoint
+            // Example:
+            // fetch('YOUR_JOTFORM_OR_WEBHOOK_URL', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // });
+            
+            // Show success message
+            document.getElementById('formContainer').classList.add('hidden');
+            document.getElementById('successMessage').classList.add('show');
+        });
+    </script>
+</body>
+</html>
